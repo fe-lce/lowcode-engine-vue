@@ -50,6 +50,6 @@
   },
   "repository": {
     "type": "http",
-    "url": "https://github.com/felce/lowcode-engine-vue/tree/main/packages/vue-renderer"
+    "url": "https://github.com/fe-lce/lowcode-engine-vue/tree/main/packages/vue-renderer"
   }
 }

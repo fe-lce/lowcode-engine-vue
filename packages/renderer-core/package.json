@@ -40,6 +40,6 @@
   },
   "repository": {
     "type": "http",
-    "url": "https://github.com/felce/lowcode-engine-vue/tree/main/packages/utils"
+    "url": "https://github.com/fe-lce/lowcode-engine-vue/tree/main/packages/utils"
   }
 }

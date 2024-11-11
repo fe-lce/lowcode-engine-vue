@@ -2,7 +2,7 @@
 
 Lowcode Engine Vue 渲染器及适配器实现，点击查看[在线演示](https://felce.github.io/lowcode-engine-demo/)
 
-> PS: 该项目仅包含画布实现，不能直接运行，如果需要本地查看效果请访问 [DEMO](https://github.com/felce/lowcode-engine-demo) 仓库
+> PS: 该项目仅包含画布实现，不能直接运行，如果需要本地查看效果请访问 [DEMO](https://github.com/fe-lce/lowcode-engine-demo) 仓库
 
 ## 如何自定义组件
 
@@ -47,7 +47,7 @@ appHelper 暴露给 `this` 的属性都会加上 `$` 前缀，区别于其他属
 
 ## Vue 代码编辑器
 
-现已支持 [Vue 代码编辑器 @knxcloud/lowcode-plugin-vue-code-editor](https://github.com/KNXCloud/lowcode-engine-plugins/tree/main/packages/plugin-vue-code-editor)，支持情况如下
+现已支持 [Vue 代码编辑器 @felce/lowcode-plugin-vue-code-editor](https://github.com/fe-lce/lowcode-engine-plugins/tree/main/packages/plugin-vue-code-editor)，支持情况如下
 
 - [x] ESModule
   - [x] import (assets 加载的包，可以使用 `import` 语法导入)
@@ -155,13 +155,13 @@ init(document.getElementById('lce'), {
 ## 本地调试
 
 ```bash
-git clone git@github.com:felce/lowcode-engine-vue.git
+git clone git@github.com:fe-lce/lowcode-engine-vue.git
 cd lowcode-engine-vue
 pnpm install && pnpm -r build
 pnpm start
 ```
 
-项目启动后，提供了 umd 文件，可以结合 [DEMO](https://github.com/felce/lowcode-engine-demo) 项目做调试，文件代理推荐[XSwitch](https://chrome.google.com/webstore/detail/xswitch/idkjhjggpffolpidfkikidcokdkdaogg?hl=en-US), 规则参考:
+项目启动后，提供了 umd 文件，可以结合 [DEMO](https://github.com/fe-lce/lowcode-engine-demo) 项目做调试，文件代理推荐[XSwitch](https://chrome.google.com/webstore/detail/xswitch/idkjhjggpffolpidfkikidcokdkdaogg?hl=en-US), 规则参考:
 
 ```JSON
 {
