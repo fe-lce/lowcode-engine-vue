@@ -1,4 +1,4 @@
-import { RequestHandlersMap } from '@alilc/lowcode-types';
+import { RequestHandlersMap } from '@felce/lowcode-types';
 import {
   DataSourceOptions,
   DataSourceContext,

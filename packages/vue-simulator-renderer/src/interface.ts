@@ -1,6 +1,6 @@
 import type { Router } from 'vue-router';
-import type { Config, I18nMessages } from '@knxcloud/lowcode-vue-renderer';
-import type { DesignMode } from '@knxcloud/lowcode-hooks';
+import type { Config, I18nMessages } from '@felce/lowcode-vue-renderer';
+import type { DesignMode } from '@felce/lowcode-vue-renderer-core';
 import type { Component, ComponentPublicInstance, App } from 'vue';
 import type {
   IPublicTypeSimulatorRenderer,
@@ -10,7 +10,7 @@ import type {
   IPublicTypeRootSchema as RootSchema,
   IPublicTypeComponentSchema as ComponentSchema,
   IPublicTypeNodeInstance as NodeInstance,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 
 export type MixedComponent = NpmInfo | Component | ComponentSchema;
 

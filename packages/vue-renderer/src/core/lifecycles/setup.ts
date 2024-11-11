@@ -4,7 +4,7 @@ import {
   isObject,
   isPromise,
   toString,
-} from '@knxcloud/lowcode-utils';
+} from '@felce/lowcode-vue-renderer-core';
 import { toRaw } from 'vue';
 import {
   AccessTypes,

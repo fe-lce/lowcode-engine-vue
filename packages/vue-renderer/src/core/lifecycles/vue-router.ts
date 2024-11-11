@@ -5,7 +5,7 @@ import {
   isESModule,
   isPromise,
   sleep,
-} from '@knxcloud/lowcode-utils';
+} from '@felce/lowcode-vue-renderer-core';
 import type { ComponentPublicInstance } from 'vue';
 import type {
   Router,
@@ -117,8 +117,8 @@ export function setupLowCodeRouteGuard(
           return result(scope);
         }
       : isPromise(result)
-      ? result.then(handleRes)
-      : result;
+        ? result.then(handleRes)
+        : result;
   };
 
   return router.beforeEach((to, _, next) => {

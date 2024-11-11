@@ -2,7 +2,7 @@ import type {
   RequestHandler,
   IPublicTypeNodeSchema as NodeSchema,
   IPublicTypeContainerSchema as ContainerSchema,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 import type {
   Component,
   ComponentPublicInstance,
@@ -11,7 +11,7 @@ import type {
   PropType,
 } from 'vue';
 import type { BlockScope, I18nMessages, SchemaParser } from '../utils';
-import { INode } from '@knxcloud/lowcode-hooks';
+import { INode } from '@felce/lowcode-vue-renderer-core';
 
 export const rendererProps = {
   __scope: {

@@ -3,7 +3,7 @@ import type {
   IPublicTypeJSFunction as JSFunction,
   IPublicTypeJSExpression as JSExpression,
   IPublicTypeContainerSchema,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 import type { BlockScope, RuntimeScope } from './scope';
 import {
   isArray,
@@ -13,7 +13,7 @@ import {
   isJSFunction,
   isPlainObject,
   isString,
-} from '@knxcloud/lowcode-utils';
+} from '@felce/lowcode-vue-renderer-core';
 import { ensureArray } from './array';
 
 export const EXPRESSION_TYPE = {
@@ -84,12 +84,12 @@ export class SchemaParser {
     [K in keyof T]: T[K] extends I18nData
       ? string
       : T[K] extends JSFunction
-      ? CallableFunction
-      : T[K] extends JSExpression
-      ? unknown
-      : T[K] extends JSExpression | JSFunction
-      ? CallableFunction | unknown
-      : T[K];
+        ? CallableFunction
+        : T[K] extends JSExpression
+          ? unknown
+          : T[K] extends JSExpression | JSFunction
+            ? CallableFunction | unknown
+            : T[K];
   };
   parseSchema<T>(schema: unknown, scope?: RuntimeScope | boolean): T;
   parseSchema(schema: unknown, scope?: RuntimeScope | boolean): unknown {

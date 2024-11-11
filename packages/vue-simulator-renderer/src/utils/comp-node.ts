@@ -1,7 +1,7 @@
 import type { ComponentInternalInstance, VNode } from 'vue';
 import type { ComponentInstance, ComponentRecord } from '../interface';
 import { isProxy } from 'vue';
-import { isNil, isObject } from '@knxcloud/lowcode-utils';
+import { isNil, isObject } from '@felce/lowcode-vue-renderer-core';
 
 const SYMBOL_VDID = Symbol('_LCDocId');
 const SYMBOL_VNID = Symbol('_LCNodeId');

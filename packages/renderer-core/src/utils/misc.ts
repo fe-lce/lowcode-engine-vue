@@ -60,8 +60,8 @@ export const createObjectSplitter = (
     isString(specialProps)
       ? specialProps.split(',')
       : isArray(specialProps)
-      ? specialProps
-      : [],
+        ? specialProps
+        : [],
   );
 
   const has = isFunction(specialProps)

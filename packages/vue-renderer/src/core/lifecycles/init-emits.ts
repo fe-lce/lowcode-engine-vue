@@ -1,4 +1,4 @@
-import { isArray, isObject } from '@knxcloud/lowcode-utils';
+import { isArray, isObject } from '@felce/lowcode-vue-renderer-core';
 import type { RuntimeScope, SchemaParser } from '../../utils';
 
 export function initEmits(
@@ -11,8 +11,8 @@ export function initEmits(
   const dataResult = isArray(emitsOptions)
     ? emitsOptions.reduce((res, next) => ((res[next] = null), res), {})
     : isObject(emitsOptions)
-    ? emitsOptions
-    : null;
+      ? emitsOptions
+      : null;
 
   if (!dataResult || Object.keys(dataResult).length === 0) return;
 

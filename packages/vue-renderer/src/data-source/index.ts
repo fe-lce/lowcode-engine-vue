@@ -6,10 +6,13 @@ import {
   InterpretDataSource,
   RequestHandler,
   WillFetch,
-} from '@alilc/lowcode-types';
-import { DataSourceConfig, createDataSourceEngine } from '@knxcloud/lowcode-data-source';
+} from '@felce/lowcode-types';
+import {
+  DataSourceConfig,
+  createDataSourceEngine,
+} from '@felce/lowcode-vue-renderer-core';
 import { AccessTypes, RuntimeScope, SchemaParser, addToScope } from '../utils';
-import { isJSExpression, isJSFunction } from '@knxcloud/lowcode-utils';
+import { isJSExpression, isJSFunction } from '@felce/lowcode-vue-renderer-core';
 
 export function create(
   config: InterpretDataSource,
@@ -95,7 +98,7 @@ function transformToJSFunction<T>(
         scope,
       )
     : isJSFunction(val)
-    ? parser.parseSchema(val, scope)
-    : val;
+      ? parser.parseSchema(val, scope)
+      : val;
   return res as (() => T) | T;
 }

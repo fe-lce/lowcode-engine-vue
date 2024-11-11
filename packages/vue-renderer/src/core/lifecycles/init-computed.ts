@@ -1,4 +1,4 @@
-import { isFunction, isPlainObject, noop } from '@knxcloud/lowcode-utils';
+import { isFunction, isPlainObject, noop } from '@felce/lowcode-vue-renderer-core';
 import { computed, type ComputedOptions } from 'vue';
 import {
   AccessTypes,
@@ -21,8 +21,8 @@ export function initComputed(
     const get = isFunction(computedOptions)
       ? computedOptions.bind(scope)
       : isFunction(computedOptions.get)
-      ? computedOptions.get.bind(scope)
-      : noop;
+        ? computedOptions.get.bind(scope)
+        : noop;
     const set =
       !isFunction(computedOptions) && isFunction(computedOptions.set)
         ? computedOptions.set.bind(scope)

@@ -1,7 +1,7 @@
 import type {
   IPublicTypeNpmInfo,
   IPublicTypeComponentSchema,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 import { Component, DefineComponent, defineComponent, h } from 'vue';
 import { isComponentSchema, isESModule, isFunction, isObject } from './check';
 import { cached } from './misc';

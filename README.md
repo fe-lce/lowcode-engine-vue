@@ -1,8 +1,8 @@
 # lowcode-engine-vue
 
-Lowcode Engine Vue 渲染器及适配器实现，点击查看[在线演示](https://knxcloud.github.io/lowcode-engine-demo/)
+Lowcode Engine Vue 渲染器及适配器实现，点击查看[在线演示](https://felce.github.io/lowcode-engine-demo/)
 
-> PS: 该项目仅包含画布实现，不能直接运行，如果需要本地查看效果请访问 [DEMO](https://github.com/KNXCloud/lowcode-engine-demo) 仓库
+> PS: 该项目仅包含画布实现，不能直接运行，如果需要本地查看效果请访问 [DEMO](https://github.com/felce/lowcode-engine-demo) 仓库
 
 ## 如何自定义组件
 
@@ -101,7 +101,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import VueRenderer, {
   LOWCODE_ROUTE_META,
   setupLowCodeRouteGuard,
-} from '@knxcloud/lowcode-vue-renderer'
+} from '@felce/lowcode-vue-renderer'
 
 const schema = {} // 低代码设计器导出的页面 schema
 const components = {} // 组件映射关系对象
@@ -136,16 +136,16 @@ export default router;
 ## 画布使用示例
 
 ```ts
-import { init, project } from '@alilc/lowcode-engine';
-import { setupHostEnvironment } from '@knxcloud/lowcode-utils';
+import { init, project } from '@felce/lowcode-engine';
+import { setupHostEnvironment } from '@felce/lowcode-vue-renderer-core';
 
 setupHostEnvironment(project, 'https://unpkg.com/vue@3.2.47/dist/vue.runtime.global.js');
 
 init(document.getElementById('lce'), {
   // ...
   simulatorUrl: [
-    'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.js',
-    'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.css',
+    'https://unpkg.com/@felce/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.js',
+    'https://unpkg.com/@felce/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.css',
   ],
 });
 ```
@@ -155,19 +155,19 @@ init(document.getElementById('lce'), {
 ## 本地调试
 
 ```bash
-git clone git@github.com:KNXCloud/lowcode-engine-vue.git
+git clone git@github.com:felce/lowcode-engine-vue.git
 cd lowcode-engine-vue
 pnpm install && pnpm -r build
 pnpm start
 ```
 
-项目启动后，提供了 umd 文件，可以结合 [DEMO](https://github.com/KNXCloud/lowcode-engine-demo) 项目做调试，文件代理推荐[XSwitch](https://chrome.google.com/webstore/detail/xswitch/idkjhjggpffolpidfkikidcokdkdaogg?hl=en-US), 规则参考:
+项目启动后，提供了 umd 文件，可以结合 [DEMO](https://github.com/felce/lowcode-engine-demo) 项目做调试，文件代理推荐[XSwitch](https://chrome.google.com/webstore/detail/xswitch/idkjhjggpffolpidfkikidcokdkdaogg?hl=en-US), 规则参考:
 
 ```JSON
 {
   "proxy": [
     [
-      "(?:.*)unpkg.com/@knxcloud/lowcode-vue-simulator-renderer(?:.*)/dist/(.*)",
+      "(?:.*)unpkg.com/@felce/lowcode-vue-simulator-renderer(?:.*)/dist/(.*)",
       "http://localhost:5559/$1"
     ],
   ]
@@ -176,4 +176,4 @@ pnpm start
 
 ## 技术交流
 
-微信搜索: cjf395782896，加好友&备注：低代码引擎，申请入群
+微信搜索: kunsile-002，加好友&备注：低代码引擎，申请入群

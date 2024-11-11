@@ -1,4 +1,4 @@
-import type { IPublicTypeNodeInstance as NodeInstance } from '@alilc/lowcode-types';
+import type { IPublicTypeNodeInstance as NodeInstance } from '@felce/lowcode-types';
 import type { ComponentInternalInstance } from 'vue';
 import type { ComponentRecord } from '../interface';
 import {

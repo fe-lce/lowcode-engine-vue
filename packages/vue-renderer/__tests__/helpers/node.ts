@@ -5,11 +5,11 @@ import type {
   IPublicTypeContainerSchema,
   IPublicTypeNodeSchema,
   IPublicTypeSlotSchema,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 import * as uuid from 'uuid';
-import { INode } from '@knxcloud/lowcode-hooks';
+import { INode } from '@felce/lowcode-vue-renderer-core';
 import { set, get, cloneDeep } from 'lodash';
-import { isArray, isNodeSchema, isString } from '@knxcloud/lowcode-utils';
+import { isArray, isNodeSchema, isString } from '@felce/lowcode-vue-renderer-core';
 import { Ref, shallowRef } from 'vue';
 
 const internalPropsRegexp = /^__(\w+)__$/;
@@ -18,7 +18,7 @@ export function createNode(
   rootSchema: Ref<IPublicTypeContainerSchema | IPublicTypeSlotSchema>,
   schemaPath: string | undefined,
   meta: Partial<IPublicTypeComponentMetadata> = {},
-  nodeMaps: Record<string | number, INode | null> = {}
+  nodeMaps: Record<string | number, INode | null> = {},
 ): INode {
   const visibleChange: CallableFunction[] = [];
   const propChangeCbs: CallableFunction[] = [];
@@ -54,7 +54,7 @@ export function createNode(
                   isContainer: true,
                 },
               },
-            }
+            },
           );
         }
         return slotNode;

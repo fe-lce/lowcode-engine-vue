@@ -1,4 +1,4 @@
-import type { IPublicTypeNpmInfo } from '@alilc/lowcode-types';
+import type { IPublicTypeNpmInfo } from '@felce/lowcode-types';
 import { accessLibrary } from './build-components';
 import { isJSFunction } from './check';
 

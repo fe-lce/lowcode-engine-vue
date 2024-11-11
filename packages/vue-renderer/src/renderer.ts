@@ -1,8 +1,12 @@
 import type {
   IPublicTypeNodeSchema as NodeSchema,
   IPublicTypeContainerSchema as ContainerSchema,
-} from '@alilc/lowcode-types';
-import { getRendererContextKey, type DesignMode, INode } from '@knxcloud/lowcode-hooks';
+} from '@felce/lowcode-types';
+import {
+  getRendererContextKey,
+  type DesignMode,
+  INode,
+} from '@felce/lowcode-vue-renderer-core';
 import {
   type PropType,
   type Component,
@@ -32,7 +36,7 @@ import {
   debounce,
   exportSchema,
   isBoolean,
-} from '@knxcloud/lowcode-utils';
+} from '@felce/lowcode-vue-renderer-core';
 
 const vueRendererProps = {
   scope: Object as PropType<BlockScope>,

@@ -1,4 +1,4 @@
-import { isArray, isObject } from '@knxcloud/lowcode-utils';
+import { isArray, isObject } from '@felce/lowcode-vue-renderer-core';
 import { inject, isRef, type Ref } from 'vue';
 import {
   AccessTypes,

@@ -1,4 +1,4 @@
-import { isFunction, isObject } from '@knxcloud/lowcode-utils';
+import { isFunction, isObject } from '@felce/lowcode-vue-renderer-core';
 import {
   AccessTypes,
   addToScope,
@@ -16,8 +16,8 @@ export function initData(
   const dataResult = isFunction(dataOptions)
     ? dataOptions.call(scope)
     : isObject(dataOptions)
-    ? dataOptions
-    : null;
+      ? dataOptions
+      : null;
   if (!dataResult || Object.keys(dataResult).length === 0) return;
 
   addToScope(scope, AccessTypes.DATA, dataResult);

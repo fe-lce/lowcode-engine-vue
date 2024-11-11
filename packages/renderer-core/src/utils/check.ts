@@ -7,7 +7,7 @@ import type {
   IPublicTypeSlotSchema,
   IPublicTypeComponentSchema,
   IPublicTypeContainerSchema,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 import { toString } from './misc';
 
 export type ESModule = {

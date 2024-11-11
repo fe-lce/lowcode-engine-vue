@@ -4,7 +4,7 @@ import {
   isFunction,
   isObject,
   isString,
-} from '@knxcloud/lowcode-utils';
+} from '@felce/lowcode-vue-renderer-core';
 import { ComponentInternalInstance, Prop, PropType, withCtx } from 'vue';
 import {
   warn,
@@ -28,7 +28,7 @@ function getTypeIndex(
   expectedTypes: PropType<any> | void | null | true,
 ): number {
   if (isArray(expectedTypes)) {
-    return expectedTypes.findIndex((t) => isSameType(t, type));
+    return expectedTypes.findIndex((t) => isSameType(t as Prop<any>, type));
   } else if (isFunction(expectedTypes)) {
     return isSameType(expectedTypes, type) ? 0 : -1;
   }

@@ -1,9 +1,4 @@
 {
-  "packageManager": "pnpm@8.7.0",
-  "engines": {
-    "node": "^16.0.0",
-    "pnpm": "^8.0.0"
-  },
   "scripts": {
     "start": "pnpm -C packages/vue-simulator-renderer start",
     "build": "pnpm -r build",

@@ -1,4 +1,4 @@
-import { isFunction } from '@knxcloud/lowcode-utils';
+import { isFunction } from '@felce/lowcode-vue-renderer-core';
 import { type RuntimeScope, type SchemaParser } from '../../utils';
 
 export function created(

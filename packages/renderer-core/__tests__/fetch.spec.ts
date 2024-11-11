@@ -36,7 +36,7 @@ describe('fetch request', () => {
       fetchRequest({
         uri: 'https://127.0.0.1/info.json',
         method: 'GET',
-      })
+      }),
     ).rejects.toThrowError('Server internal error');
   });
 

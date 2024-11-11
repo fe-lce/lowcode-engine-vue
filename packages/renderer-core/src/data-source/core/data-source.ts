@@ -1,4 +1,4 @@
-import { RequestHandler, RequestHandlersMap } from '@alilc/lowcode-types';
+import { RequestHandler, RequestHandlersMap } from '@felce/lowcode-types';
 import {
   DataSource,
   DataSourceConfig,
@@ -8,7 +8,7 @@ import {
   MaybyFunc,
 } from './interface';
 import { computed, reactive, ref, shallowRef } from 'vue';
-import { isFunction, isPlainObject, isUndefined } from '@knxcloud/lowcode-utils';
+import { isFunction, isPlainObject, isUndefined } from '../../utils';
 import { fetchRequest } from '../handlers';
 
 export function createDataSource(
@@ -59,7 +59,7 @@ export function createDataSource(
                 ...params,
                 ...inputParams,
               }
-            : inputParams ?? params,
+            : (inputParams ?? params),
         headers: {
           ...(isPlainObject(headers) ? headers : {}),
           ...(isPlainObject(inputHeaders) ? inputHeaders : {}),
@@ -120,8 +120,8 @@ function getRequestHandler(
       return requestHandler;
     } else {
       return type === 'fetch'
-        ? requestHandlersMap[type] ?? fetchRequest
-        : requestHandlersMap[type] ?? null;
+        ? (requestHandlersMap[type] ?? fetchRequest)
+        : (requestHandlersMap[type] ?? null);
     }
   }
   return fetchRequest;

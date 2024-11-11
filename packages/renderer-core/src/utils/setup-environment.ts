@@ -1,4 +1,4 @@
-import type { IPublicApiProject } from '@alilc/lowcode-types';
+import type { IPublicApiProject } from '@felce/lowcode-types';
 import { assetItem, AssetType } from './asset';
 
 export function setupHostEnvironment(

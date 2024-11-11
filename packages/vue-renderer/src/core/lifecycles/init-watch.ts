@@ -1,4 +1,9 @@
-import { isArray, isFunction, isObject, isString } from '@knxcloud/lowcode-utils';
+import {
+  isArray,
+  isFunction,
+  isObject,
+  isString,
+} from '@felce/lowcode-vue-renderer-core';
 import { warn, watch } from 'vue';
 import {
   AccessTypes,
@@ -41,8 +46,8 @@ export function createWatcher(
       const handler = isFunction(raw.handler)
         ? raw.handler.bind(scope)
         : isString(raw.handler)
-        ? ctx[raw.handler]
-        : null;
+          ? ctx[raw.handler]
+          : null;
       if (isFunction(handler)) {
         watch(getter, handler, raw);
       } else {

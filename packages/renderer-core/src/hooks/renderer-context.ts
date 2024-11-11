@@ -1,4 +1,4 @@
-import type { IPublicTypeNodeSchema } from '@alilc/lowcode-types';
+import type { IPublicTypeNodeSchema } from '@felce/lowcode-types';
 import type { Component, ComponentPublicInstance, InjectionKey } from 'vue';
 import type { INode } from './current-node';
 import { inject, getCurrentInstance } from 'vue';

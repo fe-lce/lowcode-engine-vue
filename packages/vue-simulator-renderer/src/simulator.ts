@@ -1,7 +1,7 @@
 import type {
   IPublicTypeContainerSchema,
   IPublicModelDocumentModel,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 import {
   type Ref,
   createApp,
@@ -27,7 +27,7 @@ import {
   LOWCODE_ROUTE_META,
   SchemaParser,
   setupLowCodeRouteGuard,
-} from '@knxcloud/lowcode-vue-renderer';
+} from '@felce/lowcode-vue-renderer';
 import {
   AssetLoader,
   buildUtils,
@@ -35,7 +35,7 @@ import {
   getSubComponent,
   exportSchema,
   isArray,
-} from '@knxcloud/lowcode-utils';
+} from '@felce/lowcode-vue-renderer-core';
 import { Renderer, SimulatorRendererView } from './simulator-view';
 import { Slot, Leaf, Page } from './buildin-components';
 import { host } from './host';
@@ -351,7 +351,7 @@ function createSimulatorRenderer() {
   simulator.getCurrentDocument = () => {
     const crr = host.project.currentDocument;
     const docs = documentInstances.value;
-    return crr ? docs.find((doc) => doc.id === crr.id) ?? null : null;
+    return crr ? (docs.find((doc) => doc.id === crr.id) ?? null) : null;
   };
   simulator.load = (assets) => loader.load(assets);
   simulator.loadAsyncLibrary = async (asyncLibraryMap) => {
@@ -476,7 +476,7 @@ function createSimulatorRenderer() {
     if (data.appHelper) {
       const { utils, constants, ...others } = data.appHelper;
       Object.assign(context.appHelper, {
-        utils: isArray(utils) ? buildUtils(host.libraryMap, utils) : utils ?? {},
+        utils: isArray(utils) ? buildUtils(host.libraryMap, utils) : (utils ?? {}),
         constants: constants ?? {},
         ...others,
       });

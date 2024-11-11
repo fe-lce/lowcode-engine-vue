@@ -2,7 +2,7 @@ import type {
   GlobalEvent,
   IPublicModelNode,
   IPublicTypeDisposable,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 import type { InjectionKey } from 'vue';
 import type { DesignMode } from './renderer-context';
 import { inject } from 'vue';

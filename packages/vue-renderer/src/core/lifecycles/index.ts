@@ -1,4 +1,4 @@
-import type { IPublicTypeContainerSchema } from '@alilc/lowcode-types';
+import type { IPublicTypeContainerSchema } from '@felce/lowcode-types';
 import type { RuntimeScope, SchemaParser } from '../../utils';
 import { initComputed } from './init-computed';
 import { initProps } from './init-props';

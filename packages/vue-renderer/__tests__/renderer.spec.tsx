@@ -1,5 +1,5 @@
 import { Component, Suspense, ref } from 'vue';
-import type { IPublicTypePageSchema, IPublicTypeRootSchema } from '@alilc/lowcode-types';
+import type { IPublicTypePageSchema, IPublicTypeRootSchema } from '@felce/lowcode-types';
 import { mount, flushPromises } from '@vue/test-utils';
 import { defineComponent, renderSlot, computed } from 'vue';
 import VueRenderer from '../src';

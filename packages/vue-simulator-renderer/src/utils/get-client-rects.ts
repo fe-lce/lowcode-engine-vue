@@ -1,4 +1,4 @@
-import { isElement } from '@knxcloud/lowcode-utils';
+import { isElement } from '@felce/lowcode-vue-renderer-core';
 
 // a range for test TextNode clientRect
 const cycleRange = document.createRange();

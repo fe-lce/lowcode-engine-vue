@@ -23,9 +23,9 @@ win.addEventListener('beforeunload', () => {
 });
 
 export default simulator;
-export * from '@knxcloud/lowcode-vue-renderer';
+export * from '@felce/lowcode-vue-renderer';
 export {
   config as vueRendererConfig,
   default as VueRenderer,
-} from '@knxcloud/lowcode-vue-renderer';
+} from '@felce/lowcode-vue-renderer';
 export * from './interface';

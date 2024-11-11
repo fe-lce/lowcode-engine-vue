@@ -2,8 +2,8 @@ import { Suspense, createApp } from 'vue';
 import { createRouter, createMemoryHistory, RouterView } from 'vue-router';
 import { VueRenderer } from '../src/renderer';
 import { LOWCODE_ROUTE_META, setupLowCodeRouteGuard } from '../src';
-import { IPublicTypePageSchema } from '@alilc/lowcode-types';
-import { sleep } from '@knxcloud/lowcode-utils';
+import { IPublicTypePageSchema } from '@felce/lowcode-types';
+import { sleep } from '@felce/lowcode-vue-renderer-core';
 import { flushPromises } from '@vue/test-utils';
 
 describe('vue-router lifecycles', () => {

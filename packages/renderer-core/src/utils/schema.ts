@@ -1,5 +1,5 @@
-import type { IPublicTypeNodeSchema } from '@alilc/lowcode-types';
-import { IPublicEnumTransformStage } from '@alilc/lowcode-types/lib/shell/enum/transform-stage';
+import type { IPublicTypeNodeSchema } from '@felce/lowcode-types';
+import { IPublicEnumTransformStage } from '@felce/lowcode-types/lib/shell/enum/transform-stage';
 import { isFunction, isObject } from './check';
 
 export function exportSchema<T extends IPublicTypeNodeSchema>(node: unknown): T {

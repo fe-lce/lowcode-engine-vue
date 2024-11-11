@@ -4,7 +4,7 @@ import {
   WillFetch,
   RuntimeOptions,
   CustomRequestHandler,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 
 export type ReturnValueFunc<T> = (...args: unknown[]) => T;
 // eslint-disable-next-line @typescript-eslint/ban-types

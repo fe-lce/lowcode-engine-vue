@@ -1,9 +1,9 @@
 {
-  "name": "@knxcloud/lowcode-data-source",
-  "version": "1.0.0",
-  "main": "dist/lowcode-data-source.js",
-  "module": "dist/lowcode-data-source.mjs",
-  "typings": "dist/lowcode-data-source.d.ts",
+  "name": "@felce/lowcode-vue-renderer-core",
+  "main": "./dist/lowcode-vue-renderer-core.js",
+  "module": "./dist/lowcode-vue-renderer-core.mjs",
+  "typings": "./dist/lowcode-vue-renderer-core.d.ts",
+  "version": "1.6.0",
   "keywords": [
     "vue",
     "lowcode",
@@ -15,21 +15,24 @@
   "scripts": {
     "build": "vite build",
     "test": "vitest --run",
+    "test:coverage": "pnpm run test --coverage",
     "lint:type": "tsc -p ./tsconfig.json --noEmit",
     "prepack": "pnpm build"
   },
-  "dependencies": {
-    "@knxcloud/lowcode-utils": "workspace:*"
-  },
   "devDependencies": {
-    "@alilc/lowcode-types": "^1.1.10",
+    "@felce/lowcode-types": "^1.4.1",
     "vite": "^4.4.9",
     "vite-plugin-lib-types": "^2.0.4",
     "vue": "^3.3.4"
   },
   "peerDependencies": {
-    "@alilc/lowcode-types": "^1.0.0",
+    "@felce/lowcode-types": "^1.4.1",
     "vue": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "access": "public",
@@ -37,6 +40,6 @@
   },
   "repository": {
     "type": "http",
-    "url": "https://github.com/KNXCloud/lowcode-engine-vue/tree/main/packages/data-source"
+    "url": "https://github.com/felce/lowcode-engine-vue/tree/main/packages/utils"
   }
 }

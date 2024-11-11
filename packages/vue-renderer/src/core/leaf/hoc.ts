@@ -19,9 +19,9 @@ import {
   useLeaf,
   type SlotSchemaMap,
 } from '../use';
-import { useRendererContext } from '@knxcloud/lowcode-hooks';
-import type { IPublicTypeNodeSchema } from '@alilc/lowcode-types';
-import { debounce, exportSchema, isJSSlot } from '@knxcloud/lowcode-utils';
+import { useRendererContext } from '@felce/lowcode-vue-renderer-core';
+import type { IPublicTypeNodeSchema } from '@felce/lowcode-types';
+import { debounce, exportSchema, isJSSlot } from '@felce/lowcode-vue-renderer-core';
 
 const HOC_NODE_KEY: InjectionKey<{ rerenderSlots: () => void }> = Symbol('hocNode');
 const useHocNode = (rerenderSlots: () => void) => {

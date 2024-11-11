@@ -40,7 +40,7 @@ import type {
   IPublicTypeNodeSchema as NodeSchema,
   IPublicTypeJSFunction as JSFunction,
   IPublicTypeCompositeValue as CompositeValue,
-} from '@alilc/lowcode-types';
+} from '@felce/lowcode-types';
 import { leafPropKeys, type LeafProps, type RendererProps } from './base';
 import {
   type BlockScope,
@@ -54,7 +54,7 @@ import {
   INode,
   getCurrentNodeKey,
   useRendererContext,
-} from '@knxcloud/lowcode-hooks';
+} from '@felce/lowcode-vue-renderer-core';
 import {
   camelCase,
   isNil,
@@ -72,7 +72,7 @@ import {
   createObjectSplitter,
   isArray,
   isI18nData,
-} from '@knxcloud/lowcode-utils';
+} from '@felce/lowcode-vue-renderer-core';
 import { Hoc } from './leaf/hoc';
 import { Live } from './leaf/live';
 import { ensureArray, getI18n, mergeScope, AccessTypes, addToScope } from '../utils';
@@ -453,7 +453,7 @@ export function useLeaf(
       if (prop?.slotNode) {
         // design 模式，从 prop 中导出 schema
         slotSchema = prop.slotNode.schema;
-        slotParams = isSlotSchema(slotSchema) ? slotSchema.params ?? [] : [];
+        slotParams = isSlotSchema(slotSchema) ? (slotSchema.params ?? []) : [];
       } else {
         // live 模式，直接获取 schema 值
         slotSchema = ensureArray(schema.value);
@@ -621,7 +621,7 @@ export function useLeaf(
   };
 
   const buildShow = (schema: NodeSchema, scope: RuntimeScope, isDesignMode: boolean) => {
-    const hidden = isDesignMode ? schema.hidden ?? false : false;
+    const hidden = isDesignMode ? (schema.hidden ?? false) : false;
     const condition = schema.condition ?? true;
 
     if (hidden) return { scene: 'hidden', show: false };
